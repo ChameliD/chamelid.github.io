@@ -3,133 +3,154 @@
 --------------------------------------------------------------*/
 
 :root {
-  /* --primary-colors --*/
-  --white-ish:#F9F7F7;
-  --light-gray: #DBE2EF;
-  --bluish-gray: #e4e9f1;
-  --blue-light:#669bbc;
-  --blue-medium: #0077b6;
-  --blue-medium-rgb: rgb(0, 119, 182);
-  --blue-dark:#0f4c75;
-  --dark-b: #003566;
-  --gray-black: #415a77;
-  --darker-b:#1B262C;
+  /* Palette from https://colorhunt.co/palette/47347253629e87bac3d6f4ed */
 
-  /* https://colorhunt.co/palette/f9f7f7dbe2ef3f72af112d4e */
+    /* Clean teal palette */
+
+  --white-ish: #FFFFFF;
+
+  /* Background */
+  --light-gray: #F2F4F6;      /* page background */
+  --bluish-gray: #E6EFEF;
+
+  /* Accent colors */
+  --blue-light: #9AD0C2;      /* soft mint accent */
+  --blue-medium: #2D9596;    /* primary teal */
+  --blue-medium-rgb: rgb(45, 149, 150);
+  --blue-dark: #1F6F70;      /* darker teal for hover */
+
+  /* Text */
+  --gray-black: #2F3E46;     /* main text */
+  --dark-b: #1E293B;
+  --darker-b: #0F172A;
 }
 
 html, body {
-    height:100%;
+  height: 100%;
 }
 
-/* Use the root variable for primary color in your CSS */
+/* Base page styling */
 body {
   background-color: var(--light-gray);
-  /* font-family: "Open Sans", sans-serif; */
   font-family: 'Ubuntu Sans', sans-serif;
   color: var(--gray-black);
-  /* padding-bottom: 600px; */
-
-  
-  
 }
 
-/* .ref-author-lemos {
-    font-weight: 700; 
-    color:var(--darker-b);
-}
-
-.ref-journal{
-    font-weight: 700 !important; 
-    font-style: italic !important;
-    color:var(--blue-medium) !important;
-} */
-
+/* --------------------------------------------------------------
+# Navigation
+-------------------------------------------------------------- */
 
 nav {
-	background-color:var(--blue-dark);
-    /* height: 5rem; */
+  background-color: var(--blue-dark);
 }
 
-.navbar-brand{
-	color:var(--light-gray) !important;
-	font-size:1.75rem !important;
-    font-weight: 700;
+.navbar-brand {
+  color: var(--white-ish) !important;
+  font-size: 1.75rem !important;
+  font-weight: 700;
 }
 
-.nav-link{
-	color:var(--light-gray) !important;
+.nav-link {
+  color: var(--white-ish) !important;
 }
 
-.navbar-expand-lg{
-    font-size:1.2rem !important;
+.navbar-expand-lg {
+  font-size: 1.2rem !important;
 }
 
+/* --------------------------------------------------------------
+# Links
+-------------------------------------------------------------- */
 
-/* buttons */
-
-
-
-
-#header_middle_letter{
-    color: var(--blue-light);
+#header_middle_letter {
+  color: var(--blue-light);
 }
 
 a {
-  color:var(--blue-light);
+  color: var(--blue-medium);
+  text-decoration: none;
 }
 
 a:hover {
-  color: var(--blue-medium) !important;
-  /* text-decoration: none !important; */
-  /* font-size:1.3rem !important; */
+  color: var(--blue-dark) !important;
+  text-decoration: none;
 }
+
+/* --------------------------------------------------------------
+# Headings
+-------------------------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
-  /* font-family: "Raleway", sans-serif;
-   */
-   font-family: 'Ubuntu Sans', sans-serif;
+  font-family: 'Ubuntu Sans', sans-serif;
 }
 
+/* --------------------------------------------------------------
+# Buttons
+-------------------------------------------------------------- */
 
-/* footer */
+/* Custom theme button used in your HTML: class="btn btn-blue ..." */
+.btn-blue {
+  background-color: var(--blue-medium);
+  border-color: var(--blue-medium);
+  color: #ffffff !important;
+}
+
+.btn-blue:hover,
+.btn-blue:focus {
+  background-color: var(--blue-dark);
+  border-color: var(--blue-dark);
+  color: #ffffff !important;
+}
+
+/* Optional: make links inside buttons inherit white color */
+.btn-blue a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.btn-blue a:hover {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+/* --------------------------------------------------------------
+# Footer
+-------------------------------------------------------------- */
 
 .footer-lemos {
-  background-color: #0f4c75;
+  background-color: var(--blue-dark);
   font-size: smaller;
 }
 
 .footer-lemos-nifme {
-    background-color: #1B262C;
-    font-size: smaller;
-  }
-
-.footer-icons{
-    color: var(--blue-light);   
+  background-color: var(--darker-b);
+  font-size: smaller;
 }
 
-.footer-icons:hover{
-    color: var(--blue-medium);   
+.footer-icons {
+  color: var(--blue-light);
 }
 
+.footer-icons:hover {
+  color: var(--blue-medium);
+}
+
+/* --------------------------------------------------------------
+# Layout helpers
+-------------------------------------------------------------- */
 
 #page-container {
-    position: relative;
-    /* min-height: 94%; */
-    min-height:93vh;
-  }
-  
+  position: relative;
+  min-height: 93vh;
+}
+
 #content-wrap {
-    /* padding-bottom: 100px;    Footer height */
-    padding-bottom: 2.5rem;    /*Footer height*/
-    /* padding-top: 5rem; */
+  padding-bottom: 2.5rem; /* Footer height */
 }
 
 #footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    /* height: 100px;            Footer height */
-    height: 2.5rem;            /*Footer height*/
-    
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem; /* Footer height */
 }
