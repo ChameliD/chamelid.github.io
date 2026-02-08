@@ -10,7 +10,7 @@ class Footer extends HTMLElement {
         <div class="py-3 px-md-5 container-fluid">
             <div class="row">
                 <div class="col-auto col-md-5 align-middle">
-                    <p class="mb-0" style="color: var(--light-gray);">© 2024 Chameli Dommanige</p>
+                    <p class="mb-0" style="color: var(--light-gray);">© 2026 Chameli Dommanige</p>
                     <p class="my-0 pt-0"><a class="" href="mailto:yourname@email.org">cdomm001@odu.edu</a></p>
 
                 </div>
